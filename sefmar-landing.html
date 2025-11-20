@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sefmar | Shop smart, shop Sefmar</title>
+  <meta name="description" content="Sefmar is the easy way to buy and sell products online. Safe payments, verified sellers and fast delivery across Nigeria." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sefmar | Shop smart, shop Sefmar" />
+  <meta property="og:description" content="Shop trusted brands and sellers with secure payments and fast delivery." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="sefmar-logo.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="sefmar-logo.png" type="image/png" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            sem: {
+              500: '#4b0f87',
+              600: '#3a0b68',
+              700: '#260744',
+              800: '#170427',
+              900: '#0e0218'
+            },
+            accent: {
+              400: '#ffc93b',
+              500: '#ffb800',
+              600: '#d89700'
+            },
+            pagebg: '#0e0218'
+          },
+          boxShadow: {
+            soft: '0 18px 80px rgba(0,0,0,0.32)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-bg {
+      background:
+        radial-gradient(900px 500px at 0% 10%, rgba(255, 200, 0, 0.22), transparent 60%),
+        radial-gradient(900px 500px at 100% 0%, rgba(255, 255, 255, 0.14), transparent 55%),
+        linear-gradient(135deg, #4b0f87, #7325c4 55%, #b070ff);
+    }
+    .glass {
+      backdrop-filter: blur(18px);
+    }
+  </style>
+</head>
+<body class="font-sans bg-pagebg text-slate-50">
+
+  <!-- Top bar -->
+  <div class="w-full bg-black/80 text-xs sm:text-sm text-slate-100 text-center py-2 px-4">
+    🎁 Welcome to Sefmar — launch promos, limited deals & buyer protection on every prepaid order.
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-pagebg/95 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-2xl bg-white shadow-soft overflow-hidden flex items-center justify-center">
+          <img src="sefmar-logo.png" alt="Sefmar logo" class="h-full w-full object-contain" />
+        </div>
+        <div class="leading-tight">
+          <p class="font-semibold text-sm sm:text-base tracking-tight">Sefmar</p>
+          <p class="text-[11px] uppercase tracking-[0.18em] text-slate-300">Shop smart, shop Sefmar</p>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-200">
+        <a href="#shop" class="hover:text-accent-400">Shop</a>
+        <a href="#categories" class="hover:text-accent-400">Categories</a>
+        <a href="#sellers" class="hover:text-accent-400">For Sellers</a>
+        <a href="#faq" class="hover:text-accent-400">FAQ</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#signin" class="text-sm text-slate-200 hover:text-accent-400">Sign in</a>
+        <a href="#cta" class="inline-flex items-center justify-center rounded-full bg-accent-500 px-4 py-2 text-sm font-semibold text-slate-900 shadow-soft hover:bg-accent-400">
+          Start shopping
+        </a>
+      </div>
+
+      <!-- Mobile menu btn -->
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-md border border-white/15 p-2 text-slate-50">
+        <span class="sr-only">Open menu</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-pagebg/98">
+      <div class="px-4 py-4 space-y-3 text-sm text-slate-100">
+        <a href="#shop" class="block">Shop</a>
+        <a href="#categories" class="block">Categories</a>
+        <a href="#sellers" class="block">For Sellers</a>
+        <a href="#faq" class="block">FAQ</a>
+        <div class="pt-2 flex gap-2">
+          <a href="#signin" class="flex-1 inline-flex items-center justify-center rounded-full border border-slate-600 px-4 py-2 text-sm">
+            Sign in
+          </a>
+          <a href="#cta" class="flex-1 inline-flex items-center justify-center rounded-full bg-accent-500 px-4 py-2 text-sm font-semibold text-slate-900">
+            Start shopping
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="hero-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+          Shop everything you love<br class="hidden sm:block" />
+          <span class="text-accent-300">from sellers you can trust.</span>
+        </h1>
+        <p class="mt-4 text-base sm:text-lg text-slate-100/90 max-w-xl">
+          Sefmar is your curated marketplace for fashion, gadgets, beauty and home finds. Safe payments, verified stores and fast delivery across Nigeria.
+        </p>
+
+        <!-- Search bar style -->
+        <form class="mt-6 max-w-xl">
+          <div class="flex flex-col sm:flex-row gap-3">
+            <div class="flex-1 flex items-center rounded-2xl bg-white/95 px-3 py-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 5a6 6 0 100 12 6 6 0 000-12z" />
+              </svg>
+              <input type="search" placeholder="Search for sneakers, wigs, gadgets..."
+                     class="flex-1 bg-transparent border-0 outline-none text-sm text-slate-900 placeholder:text-slate-400 px-2" />
+            </div>
+            <button type="button" class="inline-flex items-center justify-center rounded-2xl bg-accent-500 px-4 py-3 text-sm font-semibold text-slate-900 shadow-soft hover:bg-accent-400">
+              Browse deals
+            </button>
+          </div>
+        </form>
+
+        <p class="mt-3 text-xs text-slate-100/80">
+          🔒 Escrow-protected payments · 🚚 Same-day delivery in select cities · ⭐ Ratings on every store
+        </p>
+      </div>
+
+      <!-- Hero right cards -->
+      <div class="relative">
+        <div class="absolute -top-10 -right-4 h-24 w-24 rounded-full bg-accent-500/70 blur-2xl opacity-70"></div>
+
+        <div class="relative grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Mini cart -->
+          <div class="sm:col-span-2 glass rounded-3xl bg-white/10 border border-white/20 shadow-soft px-5 py-4">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-xs uppercase tracking-[0.22em] text-slate-200">Cart preview</p>
+              <span class="inline-flex items-center rounded-full bg-emerald-400/20 px-2 py-0.5 text-[11px] text-emerald-200 border border-emerald-400/40">
+                ● Secured checkout
+              </span>
+            </div>
+            <div class="space-y-3 text-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="h-9 w-9 rounded-xl bg-black/30 border border-white/10"></div>
+                  <div>
+                    <p class="font-medium">Wireless earbuds</p>
+                    <p class="text-[11px] text-slate-300">Ships from Lagos</p>
+                  </div>
+                </div>
+                <p class="font-semibold">₦18,500</p>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="h-9 w-9 rounded-xl bg-black/30 border border-white/10"></div>
+                  <div>
+                    <p class="font-medium">Statement handbag</p>
+                    <p class="text-[11px] text-slate-300">Creator store</p>
+                  </div>
+                </div>
+                <p class="font-semibold">₦22,000</p>
+              </div>
+              <div class="pt-2 border-t border-white/10 flex items-center justify-between text-xs text-slate-200">
+                <span>Delivery (standard)</span>
+                <span>₦1,700</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-semibold">Total</span>
+                <span class="text-base font-bold text-accent-300">₦42,200</span>
+              </div>
+              <button class="mt-2 w-full rounded-2xl bg-accent-500 text-slate-900 text-sm font-semibold py-2.5 hover:bg-accent-400">
+                Checkout securely
+              </button>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="glass rounded-3xl bg-black/40 border border-white/15 p-4 space-y-3">
+            <p class="text-xs uppercase tracking-[0.18em] text-slate-300 mb-1">Today on Sefmar</p>
+            <div class="space-y-2 text-sm">
+              <div class="flex items-baseline justify-between">
+                <span class="text-slate-200">Orders processed</span>
+                <span class="font-semibold text-accent-300">1,248</span>
+              </div>
+              <div class="flex items-baseline justify-between">
+                <span class="text-slate-200">Verified sellers</span>
+                <span class="font-semibold text-accent-200">310</span>
+              </div>
+              <div class="flex items-baseline justify-between">
+                <span class="text-slate-200">Avg. delivery time</span>
+                <span class="font-semibold text-emerald-300">1.9 days</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categories bubble -->
+          <div class="glass rounded-3xl bg-white/8 border border-white/15 p-4 space-y-2">
+            <p class="text-xs uppercase tracking-[0.18em] text-slate-300">Trending right now</p>
+            <div class="flex flex-wrap gap-2 mt-2 text-xs">
+              <span class="px-3 py-1 rounded-full bg-black/40">Sneakers</span>
+              <span class="px-3 py-1 rounded-full bg-black/40">Wigs & hair</span>
+              <span class="px-3 py-1 rounded-full bg-black/40">Skincare</span>
+              <span class="px-3 py-1 rounded-full bg-black/40">Home decor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why shop with Sefmar -->
+  <section id="shop" class="bg-pagebg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-50">Why shoppers love Sefmar</h2>
+        <p class="mt-3 text-slate-300 text-sm sm:text-base">
+          Built from day one for Nigerian shoppers who care about trust, speed and vibes.
+        </p>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
+          <div class="h-9 w-9 rounded-full bg-accent-500/20 text-accent-200 flex items-center justify-center mb-4">💳</div>
+          <h3 class="font-semibold mb-2">Secure multi-payment</h3>
+          <p class="text-sm text-slate-300">
+            Pay with cards, transfers, wallet or pay-on-delivery (where available). Every transaction is encrypted and monitored.
+          </p>
+        </div>
+        <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
+          <div class="h-9 w-9 rounded-full bg-accent-500/20 text-accent-200 flex items-center justify-center mb-4">🛡️</div>
+          <h3 class="font-semibold mb-2">Buyer protection</h3>
+          <p class="text-sm text-slate-300">
+            Funds are held in escrow until your order is delivered and confirmed. If something goes wrong, our support team steps in.
+          </p>
+        </div>
+        <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
+          <div class="h-9 w-9 rounded-full bg-accent-500/20 text-accent-200 flex items-center justify-center mb-4">⚡</div>
+          <h3 class="font-semibold mb-2">Fast delivery</h3>
+          <p class="text-sm text-slate-300">
+            Partnered logistics providers help Sefmar ship faster across major cities with live tracking on most orders.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section id="categories" class="bg-sem-900/80 border-y border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-50">Browse by category</h2>
+          <p class="mt-3 text-slate-300 text-sm sm:text-base">
+            Discover curated picks across our most-loved aisles.
+          </p>
+        </div>
+        <button class="inline-flex items-center rounded-full border border-accent-500/60 px-4 py-2 text-xs sm:text-sm font-medium text-accent-200 hover:bg-accent-500/10">
+          View all categories
+        </button>
+      </div>
+
+      <div class="mt-8 grid gap-5 md:grid-cols-4 text-sm">
+        <div class="rounded-2xl bg-black/40 border border-white/10 p-4 flex flex-col justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-accent-300 mb-1">Fashion</p>
+            <h3 class="font-semibold text-slate-50 mb-2">Fits that slap</h3>
+            <p class="text-slate-300 text-xs">Streetwear, basics, dresses and more from rising brands and IG stores.</p>
+          </div>
+          <button class="mt-4 text-xs font-semibold text-accent-300 hover:text-accent-100">Shop fashion →</button>
+        </div>
+        <div class="rounded-2xl bg-black/40 border border-white/10 p-4 flex flex-col justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-accent-300 mb-1">Beauty</p>
+            <h3 class="font-semibold text-slate-50 mb-2">Glow section</h3>
+            <p class="text-slate-300 text-xs">Skincare, haircare and fragrance from trusted vendors and estheticians.</p>
+          </div>
+          <button class="mt-4 text-xs font-semibold text-accent-300 hover:text-accent-100">Shop beauty →</button>
+        </div>
+        <div class="rounded-2xl bg-black/40 border border-white/10 p-4 flex flex-col justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-accent-300 mb-1">Gadgets</p>
+            <h3 class="font-semibold text-slate-50 mb-2">Tech & accessories</h3>
+            <p class="text-slate-300 text-xs">Earbuds, speakers, phone accessories and more—no fake specs.</p>
+          </div>
+          <button class="mt-4 text-xs font-semibold text-accent-300 hover:text-accent-100">Shop gadgets →</button>
+        </div>
+        <div class="rounded-2xl bg-black/40 border border-white/10 p-4 flex flex-col justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-accent-300 mb-1">Home</p>
+            <h3 class="font-semibold text-slate-50 mb-2">Home & living</h3>
+            <p class="text-slate-300 text-xs">Bedding, decor, kitchenware and little upgrades that make home feel luxe.</p>
+          </div>
+          <button class="mt-4 text-xs font-semibold text-accent-300 hover:text-accent-100">Shop home →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sellers -->
+  <section id="sellers" class="bg-pagebg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-50">
+          For sellers, Sefmar is your storefront on autopilot.
+        </h2>
+        <p class="mt-3 text-slate-300 text-sm sm:text-base">
+          List products in minutes, collect payments instantly and manage orders from one simple dashboard.
+        </p>
+        <ul class="mt-5 space-y-3 text-sm text-slate-200">
+          <li>• Simple product upload with images, variants and stock.</li>
+          <li>• Automatic receipts, reports and low-stock alerts.</li>
+          <li>• Payouts to your bank account on schedule.</li>
+          <li>• Tools for discounts, vouchers and influencer campaigns.</li>
+        </ul>
+        <a href="#cta" class="mt-6 inline-flex items-center rounded-full bg-accent-500 px-6 py-2.5 text-sm font-semibold text-slate-900 shadow-soft hover:bg-accent-400">
+          Open a free seller account
+        </a>
+      </div>
+
+      <div class="glass rounded-3xl bg-white/8 border border-white/15 p-5 shadow-soft">
+        <p class="text-xs uppercase tracking-[0.18em] text-slate-300 mb-3">Sample seller snapshot</p>
+        <div class="bg-black/40 rounded-2xl p-4 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-slate-300">Today’s revenue</span>
+            <span class="text-sm font-semibold text-accent-200">₦182,400</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-slate-300">Orders</span>
+            <span class="text-sm font-semibold text-slate-100">39</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-slate-300">Conversion rate</span>
+            <span class="text-sm font-semibold text-emerald-300">4.7%</span>
+          </div>
+          <div class="pt-3 border-t border-white/10 text-xs text-slate-300">
+            “Since moving to Sefmar, we doubled our online orders without hiring a tech team.”
+            <div class="mt-2 text-[11px] text-slate-400">— Lumi Beauty Store</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="bg-gradient-to-r from-sem-700 via-sem-500 to-sem-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-50">
+        Ready to start shopping or selling on Sefmar?
+      </h2>
+      <p class="mt-3 text-sm sm:text-base text-slate-200 max-w-2xl mx-auto">
+        Join a growing marketplace built for Nigeria — where design, trust and speed actually matter.
+      </p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#signin" class="inline-flex items-center justify-center rounded-full bg-accent-500 px-7 py-3 text-sm font-semibold text-slate-900 shadow-soft hover:bg-accent-400">
+          Create a free account
+        </a>
+        <a href="#sellers" class="inline-flex items-center justify-center rounded-full border border-white/40 px-7 py-3 text-sm font-semibold text-slate-50 hover:bg-white/10">
+          Become a Sefmar seller
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="bg-pagebg">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-50 text-center">
+        Frequently asked questions
+      </h2>
+      <div class="mt-8 space-y-4">
+        <details class="group rounded-2xl bg-white/5 border border-white/10 p-4">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <span class="font-medium text-sm sm:text-base text-slate-50">Is Sefmar a marketplace or a single store?</span>
+            <svg class="h-5 w-5 text-slate-300 transition group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-300">
+            Sefmar is a curated marketplace. Multiple verified sellers list their products, but we standardise the experience so checkout and delivery feel consistent.
+          </p>
+        </details>
+
+        <details class="group rounded-2xl bg-white/5 border border-white/10 p-4">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <span class="font-medium text-sm sm:text-base text-slate-50">Where does Sefmar deliver to?</span>
+            <svg class="h-5 w-5 text-slate-300 transition group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-300">
+            We currently focus on major Nigerian cities, with more locations added over time. Availability, fees and delivery times depend on the seller and your exact address.
+          </p>
+        </details>
+
+        <details class="group rounded-2xl bg-white/5 border border-white/10 p-4">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <span class="font-medium text-sm sm:text-base text-slate-50">How are sellers verified?</span>
+            <svg class="h-5 w-5 text-slate-300 transition group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-300">
+            Sellers go through identity and business checks, and we monitor order ratings and dispute history. Stores that don’t meet our standards are removed.
+          </p>
+        </details>
+
+        <details class="group rounded-2xl bg-white/5 border border-white/10 p-4">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <span class="font-medium text-sm sm:text-base text-slate-50">Can I integrate Sefmar with my existing website?</span>
+            <svg class="h-5 w-5 text-slate-300 transition group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-300">
+            For now, Sefmar is a standalone marketplace. As we grow, we’ll introduce tools like embeddable storefronts and “Buy with Sefmar” buttons.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div class="flex items-center gap-2">
+        <span class="text-slate-200 font-medium">Sefmar</span>
+        <span>·</span>
+        <span>Shop smart, shop Sefmar.</span>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a href="#" class="hover:text-slate-200">Terms</a>
+        <a href="#" class="hover:text-slate-200">Privacy</a>
+        <a href="#" class="hover:text-slate-200">Support</a>
+      </div>
+      <p class="text-[11px] text-slate-500">© <span id="year"></span> Sefmar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>
